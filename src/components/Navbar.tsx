@@ -17,7 +17,7 @@ const menuItems = [
     desp: "adslfjaslfdjlkajfljsfkadsjflajdflkajsdfkajsdfjakdjfksjflksajdfjasdfsahgasdfksajfajdfjadfljalkdjflk",
     submenu: [
       { label: "Overview", href: "about" },
-      { label: "Vision & Mission", href: "#" },
+      { label: "Vision & Mission", href: "VisionMission" },
       { label: "Executive Profile", href: "#" },
     ],
   },
