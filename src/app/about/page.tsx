@@ -14,15 +14,15 @@ export default function CompanyPage() {
             {/* Hero Image */}
             <div className="relative mb-8">
               <Image
-                src="/images/zamil-facility.png"
-                alt="The Zamil Steel Company facility showing industrial buildings and parking area"
+                src="/images/Gatih-facility.png"
+                alt="The Gatih Steel Company facility showing industrial buildings and parking area"
                 width={1200}
                 height={600}
                 className="w-full h-auto rounded-lg shadow-lg"
                 priority
               />
               <div className="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded text-sm">
-                The Zamil Steel Company
+                The Gatih Steel Company
               </div>
             </div>
 
@@ -31,9 +31,9 @@ export default function CompanyPage() {
               <div className="flex items-start gap-4 mb-6">
                 <Quote className="text-gray-400 text-4xl flex-shrink-0 mt-2" size={48} />
                 <p className="text-lg leading-relaxed text-gray-800">
-                  <strong>Zamil Steel Pre-Engineered Buildings Co. Ltd.</strong> was established in 1977 in Dammam,
+                  <strong>Gatih Steel Pre-Engineered Buildings Co. Ltd.</strong> was established in 1977 in Dammam,
                   Saudi Arabia, specialized in the design, manufacture and supply of pre-engineered steel buildings. At
-                  Zamil Steel, we focus on meeting the needs of our worldwide customers for durable, affordable and
+                  Gatih Steel, we focus on meeting the needs of our worldwide customers for durable, affordable and
                   versatile steel structures.
                 </p>
               </div>
@@ -48,7 +48,7 @@ export default function CompanyPage() {
               </p>
 
               <p>
-                Zamil Steel Pre-Engineered Buildings Co. Ltd. is the oldest and largest of the Zamil Steel Holding
+                Gatih Steel Pre-Engineered Buildings Co. Ltd. is the oldest and largest of the Gatih Steel Holding
                 companies. Our Dammam-based PEB factory - is the largest single PEB factory in the world. It has a
                 monthly production capacity of 9,500 metric tons. We commissioned more pre-engineered buildings
                 factories - in Egypt, India, UAE and Vietnam - expanding our total PEB production capacity to 30,000 MT
@@ -56,7 +56,7 @@ export default function CompanyPage() {
               </p>
 
               <p>
-                With a total production capacity of more than 6,000,000 m<sup>2</sup> per annum, Zamil Steel is
+                With a total production capacity of more than 6,000,000 m<sup>2</sup> per annum, Gatih Steel is
                 considered the largest manufacturer of pre-engineered steel buildings in the world.
               </p>
             </div>
@@ -101,7 +101,7 @@ export default function CompanyPage() {
             {/* Holding Company Section */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 text-blue-600 font-semibold">
-                <span>Zamil Steel</span>
+                <span>Gatih Steel</span>
                 <span className="text-gray-800">Holding Company</span>
                 <button className="bg-blue-600 text-white p-1 rounded hover:bg-blue-700 transition-colors duration-200">
                   <ArrowUp size={16} />
