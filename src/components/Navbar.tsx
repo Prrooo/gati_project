@@ -12,13 +12,13 @@ const menuItems = [
     ],
   },
   {
-    label: "Services",
+    label: "About",
     href: "#",
     desp: "adslfjaslfdjlkajfljsfkadsjflajdflkajsdfkajsdfjakdjfksjflksajdfjasdfsahgasdfksajfajdfjadfljalkdjflk",
     submenu: [
-      { label: "test", href: "#" },
-      { label: "test", href: "#" },
-      { label: "test", href: "#" },
+      { label: "Overview", href: "about" },
+      { label: "Vision & Mission", href: "VisionMission" },
+      { label: "Executive Profile", href: "#" },
     ],
   },
   {
