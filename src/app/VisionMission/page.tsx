@@ -25,7 +25,7 @@ export default function VisionMissionPage() {
                 </h2>
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-gray-800 font-medium leading-relaxed">
-                    To be the world's most reliable and innovative manufacturer,
+                    To be the worlds most reliable and innovative manufacturer,
                     service and solution provider in the steel industry.
                   </p>
                 </div>
