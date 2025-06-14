@@ -1,9 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useEffect, useState } from "react";
-
-// ! leading fixx
+import { useRef, useEffect } from "react";
 
 //const photos = [
 //  "sub1.jpg",
@@ -100,7 +98,7 @@ const subSection = [
 
 export default function SubMain() {
   const horizRef = useRef<HTMLDivElement>(null);
-  const [index, useIndex] = useState(0);
+  const index=0;
 
   useEffect(() => {
     const el = horizRef.current;
