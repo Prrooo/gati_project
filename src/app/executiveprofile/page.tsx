@@ -3,6 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { Linkedin } from "lucide-react" // Using Linkedin icon as an example
+import Navbar from "@/components/Navbar"
 
 interface Executive {
   id: string
@@ -67,6 +68,10 @@ export default function CompanyProfilePage() {
   }
 
   return (
+     <div className="min-h-screen bg-white">
+            <Navbar/>
+
+
     <div className="min-h-screen bg-white text-gray-800 py-8 px-4 md:px-8">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-8">
@@ -161,5 +166,6 @@ export default function CompanyProfilePage() {
         </div>
       </div>
     </div>
+            </div>
   )
 }
