@@ -18,17 +18,24 @@ const menuItems = [
     submenu: [
       { label: "Overview", href: "about" },
       { label: "Vision & Mission", href: "VisionMission" },
-      { label: "Executive Profile", href: "#" },
+      { label: "Executive Profile", href: "executiveprofile" },
     ],
   },
   {
-    label: "Services",
+    label: "Media Centre",
     href: "#",
     desp: "adslfjaslfdjlkajfljsfkasljdfkajsdf akdjfkasdfasdfjasdkf asldfjka dfjaskdfjadkfasjdflakjdffajdfflajdfkajsdfkaj",
     submenu: [
-      { label: "test", href: "#" },
-      { label: "test", href: "#" },
-      { label: "test", href: "#" },
+      { label: "Newsletters", href: "newsletters" },
+      { label: "Awards & Recognization", href: "awards" },
+    ],
+  },
+  {
+    label: "Career",
+    desp: "adslfjaslfdjlkajfljsfkasdjfklasjdflkajsdfjjjjjjjjjjjjjjjlakdsfjkasjdfljasdfkjdlfjljdflkajdfjaldjflkj",
+    href: "#",
+    submenu: [
+      { label: "Career Segment", href: "career" },
     ],
   },
 ];
@@ -49,9 +56,12 @@ export default function Navbar() {
               <div className="px-3 py-2">{item.label}</div>
             </Link>
             {item.submenu.length > 0 && (
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg">
-                {item.submenu.map((sub) => (
-                  <Link key={sub.label} href={sub.href}>
+              <div className="absolute left-0 mt-2 w-48 bg-white border rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-200 shadow-lg z-50">
+                {item.submenu.map((sub, idx) => (
+                  <Link
+                    key={`${item.label}-${sub.label}-${sub.href}-${idx}`}
+                    href={sub.href}
+                  >
                     <div className="block px-4 py-2 text-gray-600 hover:bg-gray-100">
                       {sub.label}
                     </div>
