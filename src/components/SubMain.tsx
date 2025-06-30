@@ -127,8 +127,22 @@ export default function SubMain() {
 
   return (
     <div className="flex flex-col">
-      <aside className="container mx-auto flex flex-col md:flex-row items-center gap-6 px-4 py-8">
-        <div className="w-full md:w-1/2 relative h-48 md:h-64 lg:h-80">
+      <div className="text-center mb-16 sm:mb-20">
+        <div className="mt-30 inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 font-medium text-sm mb-6">
+          <span className="w-2 h-2 bg-blue-500 rounded-full mr-2 animate-pulse"></span>
+          OUR COMMITMENT
+        </div>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+          Building a Better Future
+          <span className="block text-blue-600">Through Excellence</span>
+        </h2>
+        <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Our comprehensive approach to steel building construction encompasses environmental responsibility,
+          community engagement, and innovative solutions that shape tomorrow's infrastructure.
+        </p>
+      </div>
+      <aside className="container max-w-5/6 mt-30 mx-auto flex flex-col md:flex-row items-center gap-6 ">
+        <div className="w-full md:w-1/2 relative sm:h-96 h-48  rounded-2xl overflow-hidden">
           <Image
             src="/images/main1.jpg"
             alt="SubMain"
@@ -148,36 +162,48 @@ export default function SubMain() {
         </div>
       </aside>
 
-      <div
-        ref={horizRef}
-        className="flex gap-[2vw] my-[7vw] mx-[10vw] justify-items-center overflow-x-hidden"
-      >
-        {photos.map((file) => (
-          <div
-            key={file.text}
-            className="flex flex-col gap-[1vw] justify-items-center"
-          >
-            <div className="w-[20vw] ">
-              <Image
-                src={`/images/${file.path}`}
-                alt="photo"
-                width={256}
-                height={256}
-                className="w-full h-full rounded-2xl object-cover transform transition-transform duration-500 ease-out hover:scale-110"
-              />
+      <div className="relative">
+        <button
+          onClick={() => horizRef.current?.scrollBy({ left: -200, behavior: 'smooth' })}
+          className="md:hidden absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full shadow-lg z-10"
+          aria-label="Scroll Left"
+        >‹</button>
+        <button
+          onClick={() => horizRef.current?.scrollBy({ left: 200, behavior: 'smooth' })}
+          className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full shadow-lg z-10"
+          aria-label="Scroll Right"
+        >›</button>
+        <div
+          ref={horizRef}
+          className="flex gap-[2vw] mt-30 max-w-5/6 mx-auto items-center  overflow-x-hidden"
+        >
+          {photos.map((file) => (
+            <div
+              key={file.text}
+              className="flex flex-col gap-[1vw] justify-items-center"
+            >
+              <div className="w-[20vw] ">
+                <Image
+                  src={`/images/${file.path}`}
+                  alt="photo"
+                  width={256}
+                  height={256}
+                  className="w-full h-full rounded-2xl object-cover transform transition-transform duration-500 ease-out hover:scale-110"
+                />
+              </div>
+              <div>
+                <p>{file.text}</p>
+              </div>
+              <Link href={file.link} className=" opacity-60">
+                READ MORE ➜
+              </Link>
             </div>
-            <div>
-              <p>{file.text}</p>
-            </div>
-            <Link href={file.link} className=" opacity-60">
-              READ MORE ➜
-            </Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      <section className="container mx-auto px-4 py-8">
-        <p className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
+      <section className="container max-w-5/6 mx-auto my-20">
+        <p className="text-2xl sm:text-3xl  md:text-4xl font-semibold mb-4">
           Our Culture
         </p>
         <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">

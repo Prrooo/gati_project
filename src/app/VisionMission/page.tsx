@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -9,7 +10,7 @@ export default function VisionMissionPage() {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+      <div className=" mt-40 mb-20 min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Vision and Mission Section */}
@@ -109,6 +110,7 @@ export default function VisionMissionPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

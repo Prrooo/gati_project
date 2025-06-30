@@ -4,6 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Linkedin } from "lucide-react" // Using Linkedin icon as an example
 import Navbar from "@/components/Navbar"
+import Footer from "@/components/Footer"
 
 interface Executive {
   id: string
@@ -68,104 +69,105 @@ export default function CompanyProfilePage() {
   }
 
   return (
-     <div className="min-h-screen bg-white">
-            <Navbar/>
+    <div className="min-h-screen bg-white">
+      <Navbar />
 
 
-    <div className="min-h-screen bg-white text-gray-800 py-8 px-4 md:px-8">
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Main Content Area */}
-          <div className="lg:w-3/4">
-            {/* Selected Executive Profile */}
-            <div className="mb-8 p-4 border border-gray-200">
-              <div className="flex flex-col md:flex-row gap-6">
-                <div className="md:w-1/3 flex-shrink-0">
-                  <Image
-                    src={selectedExecutive.imageUrl || "/placeholder.svg"}
-                    alt={`Photo of ${selectedExecutive.name}`}
-                    width={200}
-                    height={250}
-                    className="object-cover w-full md:w-[200px] h-auto md:h-[250px] border border-gray-300"
-                  />
-                </div>
-                <div className="md:w-2/3">
-                  <h1 className="text-2xl md:text-3xl font-bold mb-1">{selectedExecutive.name}</h1>
-                  <p className="text-md font-semibold text-gray-700 mb-4">{selectedExecutive.title}</p>
-                  <div className="text-sm leading-relaxed space-y-3 whitespace-pre-line">
-                    {selectedExecutive.fullBio || selectedExecutive.bio}
+      <div className="mt-40 mb-20 min-h-screen bg-white text-gray-800 py-8 px-4 md:px-8">
+        <div className="container mx-auto">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Main Content Area */}
+            <div className="lg:w-3/4">
+              {/* Selected Executive Profile */}
+              <div className="mb-8 p-4 border border-gray-200">
+                <div className="flex flex-col md:flex-row gap-6">
+                  <div className="md:w-1/3 flex-shrink-0">
+                    <Image
+                      src={selectedExecutive.imageUrl || "/placeholder.svg"}
+                      alt={`Photo of ${selectedExecutive.name}`}
+                      width={200}
+                      height={250}
+                      className="object-cover w-full md:w-[200px] h-auto md:h-[250px] border border-gray-300"
+                    />
+                  </div>
+                  <div className="md:w-2/3">
+                    <h1 className="text-2xl md:text-3xl font-bold mb-1">{selectedExecutive.name}</h1>
+                    <p className="text-md font-semibold text-gray-700 mb-4">{selectedExecutive.title}</p>
+                    <div className="text-sm leading-relaxed space-y-3 whitespace-pre-line">
+                      {selectedExecutive.fullBio || selectedExecutive.bio}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* List of Other Executives */}
-            <div className="space-y-px">
-              {executivesData.map((exec) => (
-                <button
-                  key={exec.id}
-                  onClick={() => handleSelectExecutive(exec)}
-                  className={`w-full text-left p-3 border border-gray-200 hover:bg-gray-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sky-500
+              {/* List of Other Executives */}
+              <div className="space-y-px">
+                {executivesData.map((exec) => (
+                  <button
+                    key={exec.id}
+                    onClick={() => handleSelectExecutive(exec)}
+                    className={`w-full text-left p-3 border border-gray-200 hover:bg-gray-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sky-500
                     ${selectedExecutive.id === exec.id ? "bg-gray-100 font-semibold" : "bg-white"}`}
-                >
-                  <span className="text-sm md:text-base">{exec.name}</span>
-                  <span className="text-xs md:text-sm text-gray-600"> - {exec.title}</span>
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="lg:w-1/4 space-y-8">
-            <div className="p-4 border border-gray-200">
-              <div className="mb-3">
-                <span className="inline-block bg-gray-800 text-white text-xs font-semibold px-2 py-1 uppercase tracking-wider">
-                  Nomenclature
-                </span>
+                  >
+                    <span className="text-sm md:text-base">{exec.name}</span>
+                    <span className="text-xs md:text-sm text-gray-600"> - {exec.title}</span>
+                  </button>
+                ))}
               </div>
-              <h2 className="text-xl font-bold mb-2">Virtual Building Painter</h2>
-              <div className="mb-3">
-                <Image
-                  src="/placeholder.svg?width=300&height=150&text=Virtual+Painter+Ad" // Replace with actual image
-                  alt="Virtual Building Painter Advertisement"
-                  width={300}
-                  height={150}
-                  className="w-full h-auto object-contain border border-gray-300"
-                />
-              </div>
-              <a
-                href="#" // Replace with actual link
-                className="text-sky-600 hover:text-sky-700 font-semibold hover:underline"
-              >
-                Try Virtual Painter
-              </a>
             </div>
 
-            <div className="p-4 border border-gray-200">
-              <p className="text-sm mb-3">
-                <span className="font-bold text-sky-600">Zamil Steel</span> Holding Company celebrating{" "}
-                <span className="font-bold">
-                  48<sup>th</sup>
-                </span>{" "}
-                anniversary.
-              </p>
-              {/* LinkedIn Follow - Basic representation */}
-              <div className="flex items-center space-x-2 p-2 border border-gray-300 rounded bg-gray-50 w-fit">
-                <Linkedin className="w-6 h-6 text-[#0077B5]" />
-                <div>
-                  <a href="#" className="text-sm font-semibold text-[#0077B5] hover:underline">
-                    Follow
-                  </a>
-                  <p className="text-xs text-gray-500">89,736 followers</p>
+            {/* Sidebar */}
+            <aside className="lg:w-1/4 space-y-8">
+              <div className="p-4 border border-gray-200">
+                <div className="mb-3">
+                  <span className="inline-block bg-gray-800 text-white text-xs font-semibold px-2 py-1 uppercase tracking-wider">
+                    Nomenclature
+                  </span>
                 </div>
+                <h2 className="text-xl font-bold mb-2">Virtual Building Painter</h2>
+                <div className="mb-3">
+                  <Image
+                    src="/placeholder.svg?width=300&height=150&text=Virtual+Painter+Ad" // Replace with actual image
+                    alt="Virtual Building Painter Advertisement"
+                    width={300}
+                    height={150}
+                    className="w-full h-auto object-contain border border-gray-300"
+                  />
+                </div>
+                <a
+                  href="#" // Replace with actual link
+                  className="text-sky-600 hover:text-sky-700 font-semibold hover:underline"
+                >
+                  Try Virtual Painter
+                </a>
               </div>
-              {/* Note: For an actual LinkedIn follow button, you'd typically use their official script/widget.
+
+              <div className="p-4 border border-gray-200">
+                <p className="text-sm mb-3">
+                  <span className="font-bold text-sky-600">Zamil Steel</span> Holding Company celebrating{" "}
+                  <span className="font-bold">
+                    48<sup>th</sup>
+                  </span>{" "}
+                  anniversary.
+                </p>
+                {/* LinkedIn Follow - Basic representation */}
+                <div className="flex items-center space-x-2 p-2 border border-gray-300 rounded bg-gray-50 w-fit">
+                  <Linkedin className="w-6 h-6 text-[#0077B5]" />
+                  <div>
+                    <a href="#" className="text-sm font-semibold text-[#0077B5] hover:underline">
+                      Follow
+                    </a>
+                    <p className="text-xs text-gray-500">89,736 followers</p>
+                  </div>
+                </div>
+                {/* Note: For an actual LinkedIn follow button, you'd typically use their official script/widget.
                    This is a visual approximation. */}
-            </div>
-          </aside>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
+      <Footer />
     </div>
-            </div>
   )
 }

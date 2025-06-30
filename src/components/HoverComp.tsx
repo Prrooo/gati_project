@@ -1,4 +1,4 @@
-const HoverComp=()=>{
+const HoverComp = () => {
     return (
         <div>Hover</div>
     );
