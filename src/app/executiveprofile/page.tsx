@@ -18,15 +18,15 @@ interface Executive {
 const executivesData: Executive[] = [
   {
     id: "1",
-    name: "Nawaf Mohammed Al Zamil",
-    title: "President, Zamil Steel Holding",
-    imageUrl: "/placeholder.svg?width=200&height=250&text=Nawaf+M.+Al+Zamil", // Replace with actual image
-    bio: "Nawaf Al Zamil was appointed President of Zamil Steel Holding in December 2021. Previously he was serving as Executive Vice President of Zamil Steel Holding and, as General Manager of Towers & Galvanizing division of Zamil Steel. Since July 2004 he was serving as General Manager of Zamil Glass Industries (ZGI). Prior to joining ZGI, he was Deputy General Manager for International Sales of the Pre-Engineered Buildings Business Unit in Zamil Steel in January 2003.\n\nHe joined Zamil Steel in 1996 as a Purchasing Coordinator and in addition to this role was also promoted to Transport Manager in 1997, where he oversaw the import and export of the company’s raw materials and finished products. In 2000, he was promoted to the position of Purchasing Manager and was also the Purchasing Manager of Zamil Steel Egypt as well as Zamil Steel Vietnam.\n\nHe holds a Business Administration (BA) degree from Clark University, Massachusetts, USA, and an Executive MBA from King Fahd University of Petroleum and Minerals (KFUPM).",
+    name: "Nawaf Mohammed Al Gathi",
+    title: "President, Gathi Steel Holding",
+    imageUrl: "/placeholder.svg?width=200&height=250&text=Nawaf+M.+Al+Gathi", // Replace with actual image
+    bio: "Nawaf Al Gathi was appointed President of Gathi Steel Holding in December 2021. Previously he was serving as Executive Vice President of Gathi Steel Holding and, as General Manager of Towers & Galvanizing division of Gathi Steel. Since July 2004 he was serving as General Manager of Gathi Glass Industries (ZGI). Prior to joining ZGI, he was Deputy General Manager for International Sales of the Pre-Engineered Buildings Business Unit in Gathi Steel in January 2003.\n\nHe joined Gathi Steel in 1996 as a Purchasing Coordinator and in addition to this role was also promoted to Transport Manager in 1997, where he oversaw the import and export of the company’s raw materials and finished products. In 2000, he was promoted to the position of Purchasing Manager and was also the Purchasing Manager of Gathi Steel Egypt as well as Gathi Steel Vietnam.\n\nHe holds a Business Administration (BA) degree from Clark University, Massachusetts, USA, and an Executive MBA from King Fahd University of Petroleum and Minerals (KFUPM).",
   },
   {
     id: "2",
     name: "Krishnakanth Kodukula",
-    title: "Vice President, Zamil Steel Holding",
+    title: "Vice President, Gathi Steel Holding",
     imageUrl: "/placeholder.svg?width=200&height=250&text=K.+Kodukula", // Replace with actual image
     bio: "Brief bio for Krishnakanth Kodukula...",
     fullBio:
@@ -35,7 +35,7 @@ const executivesData: Executive[] = [
   {
     id: "3",
     name: "Orwah Samara",
-    title: "General Manager, Zamil Steel Structures, Saudi Arabia",
+    title: "General Manager, Gathi Steel Structures, Saudi Arabia",
     imageUrl: "/placeholder.svg?width=200&height=250&text=Orwah+Samara", // Replace with actual image
     bio: "Brief bio for Orwah Samara...",
     fullBio:
@@ -44,7 +44,7 @@ const executivesData: Executive[] = [
   {
     id: "4",
     name: "Bashar Al-Hanbali",
-    title: "General Manager, Zamil Process Equipment & ZIMIPCO",
+    title: "General Manager, Gathi Process Equipment & ZIMIPCO",
     imageUrl: "/placeholder.svg?width=200&height=250&text=Bashar+Al-Hanbali", // Replace with actual image
     bio: "Brief bio for Bashar Al-Hanbali...",
     fullBio:
@@ -53,7 +53,7 @@ const executivesData: Executive[] = [
   {
     id: "5",
     name: "Khaled Saad",
-    title: "General Manager, Zamil Steel Buildings Co. Egypt (S.A.E.)",
+    title: "General Manager, Gathi Steel Buildings Co. Egypt (S.A.E.)",
     imageUrl: "/placeholder.svg?width=200&height=250&text=Khaled+Saad", // Replace with actual image
     bio: "Brief bio for Khaled Saad...",
     fullBio:
@@ -144,7 +144,7 @@ export default function CompanyProfilePage() {
 
               <div className="p-4 border border-gray-200">
                 <p className="text-sm mb-3">
-                  <span className="font-bold text-sky-600">Zamil Steel</span> Holding Company celebrating{" "}
+                  <span className="font-bold text-sky-600">Gathi Steel</span> Holding Company celebrating{" "}
                   <span className="font-bold">
                     48<sup>th</sup>
                   </span>{" "}

@@ -12,7 +12,7 @@ export default function Page() {
           {/* Left Column */}
           <div className="lg:col-span-2">
             <header>
-              <h1 className="text-2xl sm:text-3xl font-bold text-black mb-6">Zamil Steel Newsletter</h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-black mb-6">Gathi Steel Newsletter</h1>
             </header>
             <section className="flex items-start gap-4 mb-8">
               <Quote className="w-16 h-16 text-black shrink-0 -mt-2" fill="currentColor" />
@@ -25,7 +25,7 @@ export default function Page() {
               <div className="mb-4 shadow-lg border rounded-md overflow-hidden transition-all duration-300 ease-in-out hover:shadow-xl hover:-translate-y-1">
                 <Image
                   src="/placeholder.svg?width=350&height=495"
-                  alt="Zamil Steel Newsletter Cover"
+                  alt="Gathi Steel Newsletter Cover"
                   width={350}
                   height={495}
                   className="object-cover"
