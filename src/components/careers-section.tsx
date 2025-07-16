@@ -8,27 +8,16 @@ interface CareersSectionProps {
 }
 
 export default function CareersSection({ scrollY }: CareersSectionProps) {
-  const [isVisible, setIsVisible] = useState(false)
   const [progress, setProgress] = useState(0)
-  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
-    const timer = setTimeout(() => setIsVisible(true), 2500)
-    return () => clearTimeout(timer)
-  }, [])
-
-  useEffect(() => {
-    if (!mounted) return
 
     const startScroll = window.innerHeight * 4.8
     const endScroll = window.innerHeight * 0.5
     const calculatedProgress = Math.max(0, Math.min(1, (scrollY - startScroll) / endScroll))
 
     setProgress(calculatedProgress)
-  }, [scrollY, mounted])
-
-  if (!mounted) return null // Prevent SSR crash
+  }, [scrollY])
 
   const transform = (1 - progress) * 100
 
@@ -42,25 +31,22 @@ export default function CareersSection({ scrollY }: CareersSectionProps) {
     >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2
-          className={`text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 mb-6 transition-all duration-1000 ${
-            progress > 0.3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 mb-6 transition-all duration-1000 ${progress > 0.3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           Ready to Join Our Team?
         </h2>
 
         <p
-          className={`text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${
-            progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto transition-all duration-1000 delay-200 ${progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           Discover opportunities to build your career with one of the nation's leading construction companies.
         </p>
 
         <div
-          className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-400 ${
-            progress > 0.6 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-400 ${progress > 0.6 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
         >
           <button className="bg-orange-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-orange-700 transition-colors duration-300 flex items-center gap-2 group">
             View Open Positions

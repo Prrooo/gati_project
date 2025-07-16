@@ -8,15 +8,8 @@ interface BenefitsSectionProps {
 }
 
 export default function BenefitsSection({ scrollY }: BenefitsSectionProps) {
-  const [isVisible, setIsVisible] = useState(false)
   const [progress, setProgress] = useState(0)
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-    const timer = setTimeout(() => setIsVisible(true), 1500)
-    return () => clearTimeout(timer)
-  }, [])
+  const mounted = false;
 
   useEffect(() => {
     if (!mounted) return
@@ -66,16 +59,14 @@ export default function BenefitsSection({ scrollY }: BenefitsSectionProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 mb-6 transition-all duration-1000 ${
-              progress > 0.3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-3xl sm:text-4xl md:text-5xl font-light text-gray-900 mb-6 transition-all duration-1000 ${progress > 0.3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             Benefits That Matter
           </h2>
           <p
-            className={`text-lg md:text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${
-              progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-lg md:text-xl text-gray-600 max-w-3xl mx-auto transition-all duration-1000 delay-200 ${progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             We invest in our people with comprehensive benefits and programs designed to support your success.
           </p>
@@ -85,9 +76,8 @@ export default function BenefitsSection({ scrollY }: BenefitsSectionProps) {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className={`bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-500 ${
-                progress > 0.5 + index * 0.1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-all duration-500 ${progress > 0.5 + index * 0.1 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-4">
                 <benefit.icon className="w-6 h-6 text-orange-600" />

@@ -1,28 +1,28 @@
 'use client';
 
 import React, { useState, useRef } from 'react';
-import Navbar from './Navbar';
 
 export default function VideoHero() {
 
 
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false)
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  // const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  const isVideoPlaying = false;
   const videoRef = useRef(null)
-
-  const handleVideoPlay = () => {
-    setIsVideoPlaying(true)
-    if (videoRef.current) {
-      videoRef.current.play()
-    }
-  }
-
-  const handleVideoPause = () => {
-    setIsVideoPlaying(false)
-    if (videoRef.current) {
-      videoRef.current.pause()
-    }
-  }
+  //
+  // const handleVideoPlay = () => {
+  //   setIsVideoPlaying(true)
+  //   if (videoRef.current) {
+  //     videoRef.current.play()
+  //   }
+  // }
+  //
+  // const handleVideoPause = () => {
+  //   setIsVideoPlaying(false)
+  //   if (videoRef.current) {
+  //     videoRef.current.pause()
+  //   }
+  // }
 
   return (
     <>
@@ -162,7 +162,6 @@ export default function VideoHero() {
 
                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center">
                           <button
-                            onClick={handleVideoPlay}
                             className="group-hover:scale-110 transition-all duration-300 relative"
                           >
                             <div className="absolute inset-0 bg-blue-600/30 rounded-full blur-xl animate-pulse" />
@@ -200,15 +199,15 @@ export default function VideoHero() {
                           className="w-full h-full object-cover"
                           controls
                           autoPlay
-                          onPause={handleVideoPause}
-                          onEnded={handleVideoPause}
+                        // onPause={handleVideoPause}
+                        // onEnded={handleVideoPause}
                         >
                           <source src="/demo-video.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
                       <button
-                        onClick={handleVideoPause}
+                        // onClick={handleVideoPause}
                         className="absolute -top-4 -right-4 w-10 h-10 bg-red-600 hover:bg-red-700 text-white rounded-full flex items-center justify-center shadow-lg transition-colors duration-200"
                       >
                         <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -11,7 +11,6 @@ export default function Hero({ scrollY }: HeroProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [transform, setTransform] = useState(0);
-  const [scale, setScale] = useState(1);
 
   useEffect(() => {
     setMounted(true);
@@ -24,7 +23,6 @@ export default function Hero({ scrollY }: HeroProps) {
     const maxTransform = window.innerHeight;
     const clampedTransform = Math.max(-scrollY * 0.5, -maxTransform);
     setTransform(clampedTransform);
-    setScale(1 + scrollY * 0.0005);
   }, [scrollY, mounted]);
 
   if (!mounted) return null;

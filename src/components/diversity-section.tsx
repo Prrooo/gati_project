@@ -7,27 +7,18 @@ interface DiversitySectionProps {
 }
 
 export default function DiversitySection({ scrollY }: DiversitySectionProps) {
-  const [isVisible, setIsVisible] = useState(false)
-  const [mounted, setMounted] = useState(false)
   const [progress, setProgress] = useState(0)
 
-  useEffect(() => {
-    setMounted(true)
-    const timer = setTimeout(() => setIsVisible(true), 2000)
-    return () => clearTimeout(timer)
-  }, [])
 
   useEffect(() => {
-    if (!mounted) return
 
     const startScroll = window.innerHeight * 3.8
     const endScroll = window.innerHeight * 0.5
     const calculatedProgress = Math.max(0, Math.min(1, (scrollY - startScroll) / endScroll))
 
     setProgress(calculatedProgress)
-  }, [scrollY, mounted])
+  }, [scrollY])
 
-  if (!mounted) return null // Prevent SSR crash
 
   const transform = (1 - progress) * 100
 
@@ -42,26 +33,23 @@ export default function DiversitySection({ scrollY }: DiversitySectionProps) {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl font-light mb-8 md:mb-12 transition-all duration-1000 ${
-              progress > 0.3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-3xl sm:text-4xl md:text-5xl font-light mb-8 md:mb-12 transition-all duration-1000 ${progress > 0.3 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             Diversity & Inclusion
           </h2>
 
           <p
-            className={`text-lg md:text-xl text-gray-300 leading-relaxed mb-8 transition-all duration-1000 delay-300 ${
-              progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`text-lg md:text-xl text-gray-300 leading-relaxed mb-8 transition-all duration-1000 delay-300 ${progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             We are committed to building a diverse workforce that reflects the communities we serve. Our inclusive
             culture celebrates different perspectives, backgrounds, and experiences that make us stronger together.
           </p>
 
           <div
-            className={`grid md:grid-cols-3 gap-8 mt-12 transition-all duration-1000 delay-500 ${
-              progress > 0.6 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
+            className={`grid md:grid-cols-3 gap-8 mt-12 transition-all duration-1000 delay-500 ${progress > 0.6 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
           >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">40%</div>
