@@ -110,10 +110,10 @@ export default function VisionMissionPage() {
 
               {/* Company Anniversary */}
               <div className="text-center text-sm text-gray-600">
-                <span className="text-blue-500 font-medium">GAith Steel</span>{" "}
+                <span className="text-blue-500 font-medium">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</span>{" "}
                 Holding Company celebrating{" "}
                 <span className="font-bold">
-                  48<sup>th</sup>
+                  7<sup>th</sup>
                 </span>{" "}
                 anniversary.
               </div>

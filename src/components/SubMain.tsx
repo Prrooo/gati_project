@@ -6,12 +6,12 @@ import { useRef, useEffect, useState } from "react";
 const photos = [
   {
     path: "sub1.jpg",
-    text: "Turner Construction Company to Build Soccer...",
+    text: "GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Construction Company to Build Soccer...",
     link: "#",
   },
   {
     path: "sub2.jpg",
-    text: "Turner Recognized as a Great Place to Work by...",
+    text: "GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Recognized as a Great Place to Work by...",
     link: "#",
   },
   {
@@ -21,17 +21,17 @@ const photos = [
   },
   {
     path: "sub4.jpg",
-    text: "Turner Named One of America’s Greatest...",
+    text: "GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Named One of America’s Greatest...",
     link: "#",
   },
   {
     path: "sub5.jpg",
-    text: "Turner Reaches Milestone on Clemson University...",
+    text: "GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Reaches Milestone on Clemson University...",
     link: "#",
   },
   {
     path: "sub6.jpg",
-    text: "Turner Earns ISO 14001 Certification for...",
+    text: "GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Earns ISO 14001 Certification for...",
     link: "#",
   },
 ];

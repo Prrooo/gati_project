@@ -34,8 +34,8 @@ export default function Navbar() {
 
   const aboutDropdown = [
     { name: "Overview", description: "25+ years of steel building excellence", icon: "📖", href: "about" },
-    { name: "Our Team", description: "Meet our experienced professionals", icon: "👥", href: "VisionMission" },
-    { name: "Certifications", description: "Industry standards and qualifications", icon: "🏆", href: "executiveprofile" },
+    { name: "Our Team", description: "Meet our experienced professionals", icon: "👥", href: "executiveprofile" },
+    { name: "Vison & Mission", description: "Industry standards and qualifications", icon: "🏆", href: "VisionMission" },
     { name: "Careers", description: "Join our growing team", icon: "💼", href: "career" },
   ]
 
