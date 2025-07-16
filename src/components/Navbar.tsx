@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link';
 import { useState, useRef } from 'react';
 
 
@@ -52,14 +53,14 @@ export default function Navbar() {
           </div>
 
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="/" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
+            <Link href="/" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
               Home
-            </a>
-            <a href="/pre_eng" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
+            </Link>
+            <Link href="/pre_eng" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
               Services
-            </a>
+            </Link>
             <div className="relative" onMouseEnter={() => handleMouseEnter("projects")} onMouseLeave={handleMouseLeave}>
-              <a
+              <Link
                 href="#projects"
                 className="text-white hover:text-blue-400 transition-colors font-medium flex items-center py-2"
               >
@@ -73,13 +74,13 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </a>
+              </Link>
 
               {hoveredSection === "projects" && (
                 <div className="absolute top-full left-0 mt-1 w-96 bg-white/98 backdrop-blur-md rounded-xl shadow-2xl border border-white/30 p-6 animate-in slide-in-from-top-2 duration-200">
                   <div className="space-y-1">
                     {projectsDropdown.map((item, index) => (
-                      <a
+                      <Link
                         key={index}
                         href={`#${item.name.toLowerCase().replace(/\s+/g, "-")} `}
                         className="flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 group hover:shadow-md"
@@ -93,7 +94,7 @@ export default function Navbar() {
                           </div>
                           <div className="text-sm text-gray-600 mt-1 leading-relaxed">{item.description}</div>
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -101,7 +102,7 @@ export default function Navbar() {
             </div>
 
             <div className="relative" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}>
-              <a
+              <Link
                 href="#about"
                 className="text-white hover:text-blue-400 transition-colors font-medium flex items-center py-2"
               >
@@ -115,13 +116,13 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </a>
+              </Link>
 
               {hoveredSection === "about" && (
                 <div className="absolute top-full left-0 mt-1 w-96 bg-white/98 backdrop-blur-md rounded-xl shadow-2xl border border-white/30 p-6 animate-in slide-in-from-top-2 duration-200">
                   <div className="space-y-1">
                     {aboutDropdown.map((item, index) => (
-                      <a
+                      <Link
                         key={index}
                         href={item.href}
                         className="flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 group hover:shadow-md"
@@ -135,7 +136,7 @@ export default function Navbar() {
                           </div>
                           <div className="text-sm text-gray-600 mt-1 leading-relaxed">{item.description}</div>
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -144,7 +145,7 @@ export default function Navbar() {
 
             {/* Contact Dropdown */}
             <div className="relative" onMouseEnter={() => handleMouseEnter("media")} onMouseLeave={handleMouseLeave}>
-              <a
+              <Link
                 href="#"
                 className="text-white hover:text-blue-400 transition-colors font-medium flex items-center py-2"
               >
@@ -158,13 +159,13 @@ export default function Navbar() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </a>
+              </Link>
 
               {hoveredSection === "media" && (
                 <div className="absolute top-full left-0 mt-1 w-96 bg-white/98 backdrop-blur-md rounded-xl shadow-2xl border border-white/30 p-6 animate-in slide-in-from-top-2 duration-200">
                   <div className="space-y-1">
                     {MediaCentre.map((item, index) => (
-                      <a
+                      <Link
                         key={index}
                         href={item.href}
                         className="flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 group hover:shadow-md"
@@ -178,7 +179,7 @@ export default function Navbar() {
                           </div>
                           <div className="text-sm text-gray-600 mt-1 leading-relaxed">{item.description}</div>
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -222,24 +223,24 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="lg:hidden bg-black/95 backdrop-blur-sm rounded-lg mt-2 p-4 mx-2 sm:mx-0">
             <nav className="flex flex-col space-y-4">
-              <a href="/" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
+              <Link href="/" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
                 Home
-              </a>
-              <a href="/pre_eng" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
+              </Link>
+              <Link href="/pre_eng" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
                 Services
-              </a>
+              </Link>
 
               <div className="border-l-2 border-blue-400 pl-4">
                 <div className="text-white font-medium py-2">Projects</div>
                 <div className="space-y-2 ml-2">
                   {projectsDropdown.map((item, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={`#${item.name.toLowerCase().replace(/\s+/g, "-")} `}
                       className="block text-gray-300 hover:text-blue-400 transition-colors text-sm py-1"
                     >
                       {item.icon} {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -249,13 +250,13 @@ export default function Navbar() {
                 <div className="text-white font-medium py-2">About</div>
                 <div className="space-y-2 ml-2">
                   {aboutDropdown.map((item, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={item.href}
                       className="block text-gray-300 hover:text-blue-400 transition-colors text-sm py-1"
                     >
                       {item.icon} {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -265,13 +266,13 @@ export default function Navbar() {
                 <div className="text-white font-medium py-2">Media Center</div>
                 <div className="space-y-2 ml-2">
                   {MediaCentre.map((item, index) => (
-                    <a
+                    <Link
                       key={index}
                       href={item.href}
                       className="block text-gray-300 hover:text-blue-400 transition-colors text-sm py-1"
                     >
                       {item.icon} {item.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </div>
