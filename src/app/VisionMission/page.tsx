@@ -26,8 +26,13 @@ export default function VisionMissionPage() {
                 </h2>
                 <div className="text-center max-w-2xl mx-auto">
                   <p className="text-gray-800 font-medium leading-relaxed">
-                    To be the worlds most reliable and innovative manufacturer,
-                    service and solution provider in the steel industry.
+                    Our Vision is to become the world’s most trusted and
+                    forward-thinking manufacturer, service provider, and
+                    complete solution partner in the steel industry. We aim to
+                    lead through relentless innovation, uncompromising quality,
+                    and a deep commitment to customer satisfaction — delivering
+                    not just products, but value-driven solutions that power
+                    infrastructure, industry, and progress around the globe.
                   </p>
                 </div>
               </div>
@@ -38,13 +43,19 @@ export default function VisionMissionPage() {
                   Our Mission
                 </h2>
                 <p className="text-gray-800 leading-relaxed text-justify">
-                  To supply high-quality steel products, providing related
-                  services and solutions to a worldwide client base while
-                  utilizing innovative technologies within an environment of
-                  motivated employees, focused on continuous improvement,
-                  highest business standards, work ethics and corporate
-                  citizenship, leading to added value for our customers and
-                  sustained return on investment to our shareholders.
+                  Our mission is to deliver superior-quality steel products and
+                  comprehensive services to a global clientele, driven by a
+                  commitment to cutting-edge technology, operational excellence,
+                  and customer satisfaction. We foster a workplace culture that
+                  empowers motivated employees, encourages innovation, and
+                  embraces continuous improvement at every level of the
+                  organization. By adhering to the highest standards of
+                  integrity, work ethics, and corporate responsibility, we aim
+                  to create lasting value for our customers while ensuring
+                  sustainable growth and consistent returns for our
+                  shareholders. Our focus is not only on meeting current demands
+                  but also on anticipating future needs—positioning ourselves as
+                  a responsible and resilient leader in the steel industry.
                 </p>
               </div>
             </div>
@@ -99,10 +110,10 @@ export default function VisionMissionPage() {
 
               {/* Company Anniversary */}
               <div className="text-center text-sm text-gray-600">
-                <span className="text-blue-500 font-medium">Zamil Steel</span>{" "}
+                <span className="text-blue-500 font-medium">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</span>{" "}
                 Holding Company celebrating{" "}
                 <span className="font-bold">
-                  48<sup>th</sup>
+                  7<sup>th</sup>
                 </span>{" "}
                 anniversary.
               </div>

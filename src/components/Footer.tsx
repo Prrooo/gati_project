@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white px-4 sm:px-6 lg:px-8 py-10">
       <div className="max-w-5/6 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <div className="flex items-center justify-center md:justify-start">
-          <h2 className="text-3xl font-extrabold">Turner</h2>
+          <h2 className="text-3xl font-extrabold">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</h2>
         </div>
 
         <nav className="flex justify-center">
@@ -43,8 +43,8 @@ export default function Footer() {
       <div className="border-t border-white mt-8"></div>
 
       <div className="max-w-7xl mx-auto my-20 grid grid-cols-1 lg:grid-cols-3 gap-4 opacity-80  text-gray-300">
-        <p className="text-center lg:text-left">© 2025 Turner Construction Company. All rights reserved.</p>
-        <p className="text-center">Turner is an Equal Opportunity Employer - race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or other characteristics protected by applicable law.</p>
+        <p className="text-center lg:text-left">© 2025 GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Construction Company. All rights reserved.</p>
+        <p className="text-center">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED is an Equal Opportunity Employer - race, color, religion, sex, sexual orientation, gender identity, national origin, disability, status as a protected veteran, or other characteristics protected by applicable law.</p>
         <div className="flex justify-center lg:justify-end space-x-4">
           <a href="#fraud" className="hover:text-yellow-300 transition">Fraud Alert</a>
           <a href="#privacy" className="hover:text-yellow-300 transition">Privacy Policy</a>

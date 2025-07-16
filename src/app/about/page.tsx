@@ -1,7 +1,7 @@
-import Image from "next/image"
-import { Quote, ArrowUp } from "lucide-react"
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
+import Image from "next/image";
+import { Quote, ArrowUp } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function CompanyPage() {
   return (
@@ -15,27 +15,33 @@ export default function CompanyPage() {
             {/* Hero Image */}
             <div className="relative mb-8">
               <Image
-                src="/images/Gatih-facility.png"
-                alt="The Gatih Steel Company facility showing industrial buildings and parking area"
+                src="/images/slide1.jpg"
+                alt="The GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED Company facility showing industrial buildings and parking area"
                 width={1200}
                 height={600}
                 className="w-full h-auto rounded-lg shadow-lg"
                 priority
               />
               <div className="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-3 py-1 rounded text-sm">
-                The Gatih Steel Company
+                GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED
               </div>
             </div>
 
             {/* Quote Section */}
             <div className="mb-8">
               <div className="flex items-start gap-4 mb-6">
-                <Quote className="text-gray-400 text-4xl flex-shrink-0 mt-2" size={48} />
+                <Quote
+                  className="text-gray-400 text-4xl flex-shrink-0 mt-2"
+                  size={48}
+                />
                 <p className="text-lg leading-relaxed text-gray-800">
-                  <strong>Gatih Steel Pre-Engineered Buildings Co. Ltd.</strong> was established in 1977 in Dammam,
-                  Saudi Arabia, specialized in the design, manufacture and supply of pre-engineered steel buildings. At
-                  Gatih Steel, we focus on meeting the needs of our worldwide customers for durable, affordable and
-                  versatile steel structures.
+                  <strong>GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</strong>{" "}
+                  is a Delhi-based construction and engineering company
+                  specializing in commercial infrastructure, custom steel
+                  structures, and turn-key project management. Established in
+                  2018, we have rapidly emerged as a trusted name in the
+                  industry, delivering medium to large-scale sheds, hangars, and
+                  steel-framed buildings across India.
                 </p>
               </div>
             </div>
@@ -43,22 +49,36 @@ export default function CompanyPage() {
             {/* Company Description */}
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p>
-                After thirty years in business, our customers remain our first priority. Every building that we design,
-                manufacture, and deliver for erection is created with the satisfaction of the future occupants and
-                owners in mind.
+                After thirty years in business, our customers remain our first
+                priority. Every building that we design, manufacture, and
+                deliver for erection is created with the satisfaction of the
+                future occupants and owners in mind.
               </p>
 
               <p>
-                Gatih Steel Pre-Engineered Buildings Co. Ltd. is the oldest and largest of the Gatih Steel Holding
-                companies. Our Dammam-based PEB factory - is the largest single PEB factory in the world. It has a
-                monthly production capacity of 9,500 metric tons. We commissioned more pre-engineered buildings
-                factories - in Egypt, India, UAE and Vietnam - expanding our total PEB production capacity to 30,000 MT
-                per month.
+                GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED is a Delhi-based
+                construction and engineering company specializing in commercial
+                infrastructure, custom steel structures, and turn-key project
+                management. Established in 2018, we have rapidly emerged as a
+                trusted name in the industry, delivering medium to large-scale
+                sheds, hangars, and steel-framed buildings across India.
               </p>
 
               <p>
-                With a total production capacity of more than 6,000,000 m<sup>2</sup> per annum, Gatih Steel is
-                considered the largest manufacturer of pre-engineered steel buildings in the world.
+                Our core services encompass: Design & Construction of
+                custom-built industrial and commercial sheds Structural
+                Engineering Consulting for high-performance steel buildings
+                Project Management with strict adherence to timelines and budget
+                Wholesale Supply of pre-fabricated and fabricated steel
+                structures Built on strong engineering foundations and deep
+                industry insight, we focus on innovative, cost-effective, and
+                timely delivery, making us the preferred choice for clients
+                across multiple sectors. What sets us apart is our
+                client-centric approach: we tailor each project to meet the
+                precise operational, environmental, and economic demands of the
+                customer. With in-house design, fabrication, and execution
+                capabilities, we ensure quality control at every step—from
+                concept to commissioning.
               </p>
             </div>
           </div>
@@ -67,14 +87,19 @@ export default function CompanyPage() {
           <div className="lg:col-span-1">
             {/* PEB Awareness Section */}
             <div className="bg-gray-50 rounded-lg p-6 mb-8">
-              <h2 className="text-xl font-bold text-gray-800 mb-4">PEB Awareness</h2>
+              <h2 className="text-xl font-bold text-gray-800 mb-4">
+                PEB Awareness
+              </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Each building constructs quickly, saves energy, is long-lasting and is environmentally friendly, with
-                virtually no waste in the manufacturing process -- and materials are fully recyclable
+                Each building constructs quickly, saves energy, is long-lasting
+                and is environmentally friendly, with virtually no waste in the
+                manufacturing process -- and materials are fully recyclable
               </p>
 
               {/* Nomenclature Section */}
-              <div className="bg-black text-white px-3 py-2 text-sm font-semibold mb-4">NOMENCLATURE</div>
+              <div className="bg-black text-white px-3 py-2 text-sm font-semibold mb-4">
+                NOMENCLATURE
+              </div>
 
               <div className="text-center">
                 <h3 className="text-lg font-bold text-gray-800 mb-4">
@@ -86,10 +111,17 @@ export default function CompanyPage() {
                 {/* 3D Building Model Placeholder */}
                 <div className="bg-gray-100 rounded-lg p-8 mb-4 flex items-center justify-center min-h-[200px]">
                   <div className="text-center">
-                    <div className="w-32 h-24 bg-gray-300 rounded mb-4 mx-auto flex items-center justify-center">
-                      <span className="text-gray-500 text-sm">3D Building Model</span>
-                    </div>
-                    <p className="text-gray-500 text-sm">Interactive building visualization</p>
+                    <Image
+                      src="/images/vp.jpg" // Replace with actual image
+                      alt="Virtual Building Painter Advertisement"
+                      width={300}
+                      height={150}
+                      className="w-full h-auto object-contain border border-gray-300"
+                    />
+
+                    <p className="text-gray-500 text-sm">
+                      Interactive building visualization
+                    </p>
                   </div>
                 </div>
 
@@ -102,7 +134,7 @@ export default function CompanyPage() {
             {/* Holding Company Section */}
             <div className="text-center">
               <div className="flex items-center justify-center gap-2 text-blue-600 font-semibold">
-                <span>Gatih Steel</span>
+                <span>GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</span>
                 <span className="text-gray-800">Holding Company</span>
                 <button className="bg-blue-600 text-white p-1 rounded hover:bg-blue-700 transition-colors duration-200">
                   <ArrowUp size={16} />
@@ -114,5 +146,5 @@ export default function CompanyPage() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }

@@ -72,7 +72,7 @@ export default function CultureSection({ scrollY }: CultureSectionProps) {
               progress > 0.4 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
-            At Turner, our culture is built on shared values that guide everything we do.
+            At GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED, our culture is built on shared values that guide everything we do.
           </p>
         </div>
 

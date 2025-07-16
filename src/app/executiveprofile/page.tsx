@@ -1,77 +1,72 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
-import { Linkedin } from "lucide-react" // Using Linkedin icon as an example
-import Navbar from "@/components/Navbar"
-import Footer from "@/components/Footer"
+import { useState } from "react";
+import Image from "next/image";
+import { Linkedin } from "lucide-react"; // Using Linkedin icon as an example
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 interface Executive {
-  id: string
-  name: string
-  title: string
-  imageUrl: string
-  bio: string
-  fullBio?: string // For detailed view
+  id: string;
+  name: string;
+  title: string;
+  imageUrl: string;
+  bio: string;
+  fullBio?: string; // For detailed view
 }
 
 const executivesData: Executive[] = [
   {
     id: "1",
-    name: "Nawaf Mohammed Al Zamil",
-    title: "President, Zamil Steel Holding",
-    imageUrl: "/placeholder.svg?width=200&height=250&text=Nawaf+M.+Al+Zamil", // Replace with actual image
-    bio: "Nawaf Al Zamil was appointed President of Zamil Steel Holding in December 2021. Previously he was serving as Executive Vice President of Zamil Steel Holding and, as General Manager of Towers & Galvanizing division of Zamil Steel. Since July 2004 he was serving as General Manager of Zamil Glass Industries (ZGI). Prior to joining ZGI, he was Deputy General Manager for International Sales of the Pre-Engineered Buildings Business Unit in Zamil Steel in January 2003.\n\nHe joined Zamil Steel in 1996 as a Purchasing Coordinator and in addition to this role was also promoted to Transport Manager in 1997, where he oversaw the import and export of the company’s raw materials and finished products. In 2000, he was promoted to the position of Purchasing Manager and was also the Purchasing Manager of Zamil Steel Egypt as well as Zamil Steel Vietnam.\n\nHe holds a Business Administration (BA) degree from Clark University, Massachusetts, USA, and an Executive MBA from King Fahd University of Petroleum and Minerals (KFUPM).",
+    name: "Mr. Sandeep Raj",
+    title: "Founder & Director, Head of Design",
+    imageUrl: "/placeholder.svg?width=200&height=250&text=Mr.+Sandeep+Raj", // Replace with actual image path if available
+    bio: `Mr. Sandeep Raj is the visionary Founder and Director of GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED. An esteemed alumnus of the Indian Institute of Technology (IIT) Roorkee, he holds a Master’s degree in Structural Engineering, a specialization that forms the backbone of the company’s core technical competencies.
+  
+  With a deep understanding of structural dynamics and cutting-edge engineering methodologies, Mr. Raj is widely regarded as the architect of the organization’s vision and technical philosophy. His academic pedigree, combined with extensive field experience, has enabled him to lead the company’s foray into complex commercial infrastructure projects, specializing in steel-framed buildings, industrial sheds, hangars, and turnkey structural solutions.
+  
+  As the Head of the Design Department, Mr. Raj takes an active and hands-on role in every project’s conceptualization, structural analysis, and design execution. His approach is rooted in precision, innovation, and efficiency—ensuring that every design not only meets industry standards but also addresses client-specific operational and aesthetic requirements.
+  
+  Beyond technical leadership, he plays a strategic role in driving the company’s growth, shaping its long-term goals, and building a reputation grounded in engineering excellence, integrity, and client satisfaction. His leadership has empowered the organization to consistently deliver cost-effective, durable, and scalable solutions to clients across various sectors in India.
+  
+  Under his direction, GATIH STRUCTIFORM ENGINEERS has become synonymous with reliability, structural innovation, and timely execution, reflecting his relentless pursuit of engineering perfection.`,
   },
   {
     id: "2",
-    name: "Krishnakanth Kodukula",
-    title: "Vice President, Zamil Steel Holding",
-    imageUrl: "/placeholder.svg?width=200&height=250&text=K.+Kodukula", // Replace with actual image
-    bio: "Brief bio for Krishnakanth Kodukula...",
-    fullBio:
-      "Full bio for Krishnakanth Kodukula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Mrs. Jyoti Yadav",
+    title: "Co-Founder & Director, Head of Marketing",
+    imageUrl: "/placeholder.svg?width=200&height=250&text=Jyoti+Yadav", // Replace with actual image path if available
+    bio: `Mrs. Jyoti Yadav is the Co-Founder and Director of GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED. She currently leads the company’s Marketing Division with a strong focus on strategic branding, market outreach, and client engagement.
+  
+  With a keen understanding of industry trends and client behavior, she plays a vital role in shaping the company’s public presence and growth trajectory. Her leadership ensures that the brand resonates with current and potential clients, establishing a trusted reputation in the competitive commercial construction sector.
+  
+  Mrs. Yadav’s approach blends traditional relationship-building with modern marketing strategies, helping GATIH STRUCTIFORM expand its footprint across India. Her dedication and client-centric mindset have been instrumental in forging lasting partnerships and bringing new business opportunities to the firm.`,
   },
   {
     id: "3",
-    name: "Orwah Samara",
-    title: "General Manager, Zamil Steel Structures, Saudi Arabia",
-    imageUrl: "/placeholder.svg?width=200&height=250&text=Orwah+Samara", // Replace with actual image
-    bio: "Brief bio for Orwah Samara...",
-    fullBio:
-      "Full bio for Orwah Samara. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    name: "Mr. Pranav Saxena",
+    title: "Director, Sales & Project Execution",
+    imageUrl: "/placeholder.svg?width=200&height=250&text=Pranav+Saxena", // Replace with actual image path if available
+    bio: `Mr. Pranav Saxena serves as the Director at GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED, overseeing the company’s Sales and Project Execution functions. 
+
+Having recently joined the leadership team, Mr. Saxena brings a fresh perspective and energetic approach to managing client relationships and ensuring the seamless execution of ongoing projects. His role is pivotal in aligning sales objectives with project deliverables, making sure that client expectations are met with precision and professionalism.
+
+He plays a hands-on role in coordinating between the design, fabrication, and site execution teams, enabling GATIH STRUCTIFORM to maintain its reputation for timely and quality-driven project delivery. With a strong operational focus and a result-oriented mindset, Mr. Saxena is steadily contributing to the company’s growth and client satisfaction across India.`,
   },
-  {
-    id: "4",
-    name: "Bashar Al-Hanbali",
-    title: "General Manager, Zamil Process Equipment & ZIMIPCO",
-    imageUrl: "/placeholder.svg?width=200&height=250&text=Bashar+Al-Hanbali", // Replace with actual image
-    bio: "Brief bio for Bashar Al-Hanbali...",
-    fullBio:
-      "Full bio for Bashar Al-Hanbali. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  },
-  {
-    id: "5",
-    name: "Khaled Saad",
-    title: "General Manager, Zamil Steel Buildings Co. Egypt (S.A.E.)",
-    imageUrl: "/placeholder.svg?width=200&height=250&text=Khaled+Saad", // Replace with actual image
-    bio: "Brief bio for Khaled Saad...",
-    fullBio:
-      "Full bio for Khaled Saad. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
-]
+];
 
 export default function CompanyProfilePage() {
-  const [selectedExecutive, setSelectedExecutive] = useState<Executive>(executivesData[0])
+  const [selectedExecutive, setSelectedExecutive] = useState<Executive>(
+    executivesData[0]
+  );
 
   const handleSelectExecutive = (executive: Executive) => {
-    setSelectedExecutive(executive)
-  }
+    setSelectedExecutive(executive);
+  };
 
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-
 
       <div className="mt-40 mb-20 min-h-screen bg-white text-gray-800 py-8 px-4 md:px-8">
         <div className="container mx-auto">
@@ -91,8 +86,12 @@ export default function CompanyProfilePage() {
                     />
                   </div>
                   <div className="md:w-2/3">
-                    <h1 className="text-2xl md:text-3xl font-bold mb-1">{selectedExecutive.name}</h1>
-                    <p className="text-md font-semibold text-gray-700 mb-4">{selectedExecutive.title}</p>
+                    <h1 className="text-2xl md:text-3xl font-bold mb-1">
+                      {selectedExecutive.name}
+                    </h1>
+                    <p className="text-md font-semibold text-gray-700 mb-4">
+                      {selectedExecutive.title}
+                    </p>
                     <div className="text-sm leading-relaxed space-y-3 whitespace-pre-line">
                       {selectedExecutive.fullBio || selectedExecutive.bio}
                     </div>
@@ -107,10 +106,17 @@ export default function CompanyProfilePage() {
                     key={exec.id}
                     onClick={() => handleSelectExecutive(exec)}
                     className={`w-full text-left p-3 border border-gray-200 hover:bg-gray-100 transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-sky-500
-                    ${selectedExecutive.id === exec.id ? "bg-gray-100 font-semibold" : "bg-white"}`}
+                    ${
+                      selectedExecutive.id === exec.id
+                        ? "bg-gray-100 font-semibold"
+                        : "bg-white"
+                    }`}
                   >
                     <span className="text-sm md:text-base">{exec.name}</span>
-                    <span className="text-xs md:text-sm text-gray-600"> - {exec.title}</span>
+                    <span className="text-xs md:text-sm text-gray-600">
+                      {" "}
+                      - {exec.title}
+                    </span>
                   </button>
                 ))}
               </div>
@@ -124,10 +130,9 @@ export default function CompanyProfilePage() {
                     Nomenclature
                   </span>
                 </div>
-                <h2 className="text-xl font-bold mb-2">Virtual Building Painter</h2>
                 <div className="mb-3">
                   <Image
-                    src="/placeholder.svg?width=300&height=150&text=Virtual+Painter+Ad" // Replace with actual image
+                    src="/images/vp.jpg" // Replace with actual image
                     alt="Virtual Building Painter Advertisement"
                     width={300}
                     height={150}
@@ -144,9 +149,10 @@ export default function CompanyProfilePage() {
 
               <div className="p-4 border border-gray-200">
                 <p className="text-sm mb-3">
-                  <span className="font-bold text-sky-600">Zamil Steel</span> Holding Company celebrating{" "}
+                  <span className="font-bold text-sky-600">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</span>{" "}
+                  Holding Company celebrating{" "}
                   <span className="font-bold">
-                    48<sup>th</sup>
+                    7<sup>th</sup>
                   </span>{" "}
                   anniversary.
                 </p>
@@ -154,7 +160,10 @@ export default function CompanyProfilePage() {
                 <div className="flex items-center space-x-2 p-2 border border-gray-300 rounded bg-gray-50 w-fit">
                   <Linkedin className="w-6 h-6 text-[#0077B5]" />
                   <div>
-                    <a href="#" className="text-sm font-semibold text-[#0077B5] hover:underline">
+                    <a
+                      href="#"
+                      className="text-sm font-semibold text-[#0077B5] hover:underline"
+                    >
                       Follow
                     </a>
                     <p className="text-xs text-gray-500">89,736 followers</p>
@@ -169,5 +178,5 @@ export default function CompanyProfilePage() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
