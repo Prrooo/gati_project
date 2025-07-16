@@ -221,7 +221,6 @@ export default function Page() {
             <div className="grid gap-4 sm:grid-cols-2 ">
               {benefits.map((benefit, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                  <benefit.icon className="h-8 w-8 text-blue-600 mb-3" />
                   <h4 className="text-lg font-semibold mb-2 text-gray-900">{benefit.title}</h4>
                   <p className="text-gray-600">{benefit.description}</p>
                 </div>
