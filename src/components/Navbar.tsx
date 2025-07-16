@@ -5,10 +5,10 @@ import { useState, useRef } from 'react';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [hoveredSection, setHoveredSection] = useState(null)
+  const [hoveredSection, setHoveredSection] = useState<string | null>(null)
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout>>(null)
 
-  const handleMouseEnter = (section: any) => {
+  const handleMouseEnter = (section: string) => {
     if (hoverTimeoutRef.current) {
       clearTimeout(hoverTimeoutRef.current)
     }
