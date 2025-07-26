@@ -138,7 +138,7 @@ export default function SubMain() {
         </h2>
         <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Our comprehensive approach to steel building construction encompasses environmental responsibility,
-          community engagement, and innovative solutions that shape tomorrows infrastructure.
+          community engagement, and innovative solutions that shape tomorrow's infrastructure.
         </p>
       </div>
       <aside className="container max-w-5/6 mt-30 mx-auto flex flex-col md:flex-row items-center gap-6 ">
@@ -162,47 +162,72 @@ export default function SubMain() {
         </div>
       </aside>
 
-      <div className="relative">
+      <div className="relative md:py-44 py-9">
+        {/* Left/Right buttons only on small screens */}
         <button
-          onClick={() => horizRef.current?.scrollBy({ left: -200, behavior: 'smooth' })}
-          className="md:hidden absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full shadow-lg z-10"
+          onClick={() =>
+            horizRef.current?.scrollBy({ left: -200, behavior: 'smooth' })
+          }
+          className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full shadow-lg z-10"
           aria-label="Scroll Left"
-        >‹</button>
+        >
+          ‹
+        </button>
         <button
-          onClick={() => horizRef.current?.scrollBy({ left: 200, behavior: 'smooth' })}
-          className="md:hidden absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full shadow-lg z-10"
+          onClick={() =>
+            horizRef.current?.scrollBy({ left: 200, behavior: 'smooth' })
+          }
+          className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 bg-blue-700 text-white p-2 rounded-full shadow-lg z-10"
           aria-label="Scroll Right"
-        >›</button>
+        >
+          ›
+        </button>
+
+        {/* Scroll container */}
         <div
           ref={horizRef}
-          className="flex gap-[2vw] mt-30 max-w-5/6 mx-auto items-center  overflow-x-hidden"
+          className="
+          flex gap-4
+          max-w-5/6 
+          mx-auto
+          overflow-x-hidden snap-x snap-mandatory
+          md:snap-none md:justify-center
+         "
         >
           {photos.map((file) => (
             <div
               key={file.text}
-              className="flex flex-col gap-[1vw] justify-items-center"
+              className="
+              relative 
+              snap-start flex-shrink-0
+              w-64             
+              sm:w-56          
+              md:w-[20vw]     
+              flex flex-col gap-2
+              "
             >
-              <div className="w-[20vw] ">
+              <div className="w-full h-40 sm:h-48 md:h-56 overflow-hidden rounded-2xl">
                 <Image
                   src={`/images/${file.path}`}
-                  alt="photo"
+                  alt={file.text}
                   width={256}
                   height={256}
-                  className="w-full h-full rounded-2xl object-cover transform transition-transform duration-500 ease-out hover:scale-110"
+                  className="w-full h-full object-cover transform transition-transform duration-500 ease-out hover:scale-110"
                 />
               </div>
-              <div>
-                <p>{file.text}</p>
+              <p className="text-center text-sm mb-9  md:text-base">{file.text}</p>
+              <div className="absolute w-full bottom-0 text-center">
+                <Link href="#" className="flex justify-center text-xs opacity-60 hover:opacity-100">
+                  READ MORE ➜
+                </Link>
               </div>
-              <Link href={file.link} className=" opacity-60">
-                READ MORE ➜
-              </Link>
             </div>
           ))}
         </div>
       </div>
 
-      <section className="container max-w-5/6 mx-auto my-20">
+
+      <section className="container max-w-5/6 mx-auto mb-20">
         <p className="text-2xl sm:text-3xl  md:text-4xl font-semibold mb-4">
           Our Culture
         </p>

@@ -27,7 +27,12 @@ export default function VideoHero() {
   return (
     <>
 
-      <section className="relative h-screen w-full overflow-hidden">
+      <section className="
+         relative w-full
+          pt-9                    
+          min-h-[calc(100vh-4rem)] 
+          pb-8                     
+        ">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
