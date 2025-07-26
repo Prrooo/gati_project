@@ -138,7 +138,7 @@ export default function SubMain() {
         </h2>
         <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Our comprehensive approach to steel building construction encompasses environmental responsibility,
-          community engagement, and innovative solutions that shape tomorrow's infrastructure.
+          community engagement, and innovative solutions that shape tomorrows infrastructure.
         </p>
       </div>
       <aside className="container max-w-5/6 mt-30 mx-auto flex flex-col md:flex-row items-center gap-6 ">
