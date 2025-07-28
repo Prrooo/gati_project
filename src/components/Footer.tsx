@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white px-4 sm:px-6 lg:px-8 py-10">
       <div className="max-w-5/6 mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <div className="flex items-center justify-center md:justify-start">
-          <h2 className="text-3xl font-extrabold">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</h2>
+          <h2 className="">GATIH STRUCTIFORM ENGINEERS PRIVATE LIMITED</h2>
         </div>
 
         <nav className="flex justify-center">
