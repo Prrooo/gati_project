@@ -21,12 +21,6 @@ export default function Navbar() {
     }, 150)
   }
 
-  const projectsDropdown = [
-    { name: "Recent Projects", description: "Our latest completed steel buildings", icon: "🆕" },
-    { name: "Case Studies", description: "Detailed project breakdowns and results", icon: "📊" },
-    { name: "Before & After", description: "Transformation stories of our builds", icon: "🔄" },
-    { name: "Client Testimonials", description: "What our customers say about us", icon: "⭐" },
-  ]
 
   const MediaCentre = [
     { name: "Get Free Quote", description: "Request a detailed project estimate", icon: "💰", href: "newsletters" },
@@ -63,47 +57,6 @@ export default function Navbar() {
               Products
             </Link>
 
-            {/* <div className="relative" onMouseEnter={() => handleMouseEnter("projects")} onMouseLeave={handleMouseLeave}> */}
-            {/*   <Link */}
-            {/*     href="#projects" */}
-            {/*     className="text-white hover:text-blue-400 transition-colors font-medium flex items-center py-2" */}
-            {/*   > */}
-            {/*     Projects */}
-            {/*     <svg */}
-            {/*       className="ml-1 h-4 w-4 transition-transform duration-200" */}
-            {/*       fill="none" */}
-            {/*       stroke="currentColor" */}
-            {/*       viewBox="0 0 24 24" */}
-            {/*       style={{ transform: hoveredSection === "projects" ? "rotate(180deg)" : "rotate(0deg)" }} */}
-            {/*     > */}
-            {/*       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /> */}
-            {/*     </svg> */}
-            {/*   </Link> */}
-            {/**/}
-            {/*   {hoveredSection === "projects" && ( */}
-            {/*     <div className="absolute top-full left-0 mt-1 w-96 bg-white/98 backdrop-blur-md rounded-xl shadow-2xl border border-white/30 p-6 animate-in slide-in-from-top-2 duration-200"> */}
-            {/*       <div className="space-y-1"> */}
-            {/*         {projectsDropdown.map((item, index) => ( */}
-            {/*           <Link */}
-            {/*             key={index} */}
-            {/*             href={`#${item.name.toLowerCase().replace(/\s+/g, "-")} `} */}
-            {/*             className="flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-200 group hover:shadow-md" */}
-            {/*           > */}
-            {/*             <span className="text-2xl mr-4 group-hover:scale-110 transition-transform duration-200"> */}
-            {/*               {item.icon} */}
-            {/*             </span> */}
-            {/*             <div> */}
-            {/*               <div className="font-semibold text-blue-900 group-hover:text-blue-700 text-lg"> */}
-            {/*                 {item.name} */}
-            {/*               </div> */}
-            {/*               <div className="text-sm text-gray-600 mt-1 leading-relaxed">{item.description}</div> */}
-            {/*             </div> */}
-            {/*           </Link> */}
-            {/*         ))} */}
-            {/*       </div> */}
-            {/*     </div> */}
-            {/*   )} */}
-            {/* </div> */}
 
             <div className="relative" onMouseEnter={() => handleMouseEnter("about")} onMouseLeave={handleMouseLeave}>
               <Link
@@ -237,22 +190,6 @@ export default function Navbar() {
               <Link href="/products" className="text-white hover:text-blue-400 transition-colors font-medium py-2">
                 Products
               </Link>
-
-
-              {/* <div className="border-l-2 border-blue-400 pl-4"> */}
-              {/*   <div className="text-white font-medium py-2">Projects</div> */}
-              {/*   <div className="space-y-2 ml-2"> */}
-              {/*     {projectsDropdown.map((item, index) => ( */}
-              {/*       <Link */}
-              {/*         key={index} */}
-              {/*         href={`#${item.name.toLowerCase().replace(/\s+/g, "-")} `} */}
-              {/*         className="block text-gray-300 hover:text-blue-400 transition-colors text-sm py-1" */}
-              {/*       > */}
-              {/*         {item.icon} {item.name} */}
-              {/*       </Link> */}
-              {/*     ))} */}
-              {/*   </div> */}
-              {/* </div> */}
 
               {/* Mobile About Section */}
               <div className="border-l-2 border-blue-400 pl-4">
