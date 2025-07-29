@@ -2,6 +2,14 @@
 
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { InsulationSystem } from "@/components/ProductsComp/insulationSystem";
+import { OverheadDoors } from "@/components/ProductsComp/overheadDoors";
+import { PanelColor } from "@/components/ProductsComp/panelColor";
+import { RackingSystem } from "@/components/ProductsComp/rackingSystem";
+import { RoofPanel } from "@/components/ProductsComp/roofPanel";
+import { Skyling } from "@/components/ProductsComp/skyling";
+import { SteelFraming } from "@/components/ProductsComp/steelFraming";
+import { WallPanel } from "@/components/ProductsComp/wallPanel";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -69,14 +77,14 @@ export default function Products() {
                 </div>
               </div>
             </div>)}
-          {currProduct == 0 && (<div>curr index 1 </div>)}
-          {currProduct == 1 && (<div>curr index 2</div>)}
-          {currProduct == 2 && (<div>curr index 3</div>)}
-          {currProduct == 3 && (<div>curr index 4</div>)}
-          {currProduct == 4 && (<div>curr index 5</div>)}
-          {currProduct == 5 && (<div>curr index 6</div>)}
-          {currProduct == 6 && (<div>curr index 7</div>)}
-          {currProduct == 7 && (<div>curr index 8</div>)}
+          {currProduct == 0 && (<SteelFraming />)}
+          {currProduct == 1 && (<RoofPanel />)}
+          {currProduct == 2 && (<WallPanel />)}
+          {currProduct == 3 && (<PanelColor />)}
+          {currProduct == 4 && (<InsulationSystem />)}
+          {currProduct == 5 && (<Skyling />)}
+          {currProduct == 6 && (<RackingSystem />)}
+          {currProduct == 7 && (<OverheadDoors />)}
         </div>
       </div>
       <Footer />
