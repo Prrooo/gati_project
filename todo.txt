@@ -1,0 +1,6 @@
+1. product page responsive 
+2. change the image and text of other company
+3. add image in awards page
+
+nice to have
+1. product home page rounded imaged corner
