@@ -12,16 +12,16 @@ export const RackingSystem = () => {
           <p className="opacity-70">Our portfolio includes a wide array of storage products engineered to address the varied demands of modern warehouses. By collaborating closely with you, our specialists identify your priorities and propose the optimal configuration—delivering a solution that maximizes space utilization while keeping costs under control.</p>
         </div>
         <div className="basis-2/5">
-          <Image className="rounded-2xl" src='/images/career.jpg' alt="ig" width={400} height={300} />
+          <Image className="rounded-2xl" src='/images/prodImages/rack1.jpg' alt="ig" width={400} height={300} />
         </div>
       </div>
       <h1 className="text-xl text-orange-500 mb-2">Racking Systems and Platforms for Any Size Building</h1>
       <p className="mb-4 opacity-70">Our partners at Nucor Warehouse Systems work with businesses of all sizes— from massive distribution centers for some of the leading supply chain contributors in the country to more conservative, local operations. We offer one of the most diverse product lines in the country through our offerings in the structural, roll form, tubular and cantilever product lines. Offering access to solutions from the largest pallet rack manufacturer in the world, our team can meet the needs of your operation. Whether it’s new construction or retrofit, we’re ready to get started on your next project. Download the Warehouse Racking Solutions brochure or submit a form to contact our team to learn more.</p>
       <div className="flex gap-4">
-        <Image src='/images/career.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
-        <Image src='/images/career.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
-        <Image src='/images/career.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
-        <Image src='/images/career.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
+        <Image src='/images/prodImages/rack2.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
+        <Image src='/images/prodImages/rack3.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
+        <Image src='/images/prodImages/rack4.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
+        <Image src='/images/prodImages/rack5.jpg' width={300} height={200} alt="ig" className="rounded-2xl" />
       </div>
     </div>
   )

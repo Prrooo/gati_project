@@ -12,22 +12,23 @@ export const SteelFraming = () => {
     {
       "heading": "Gable Clear Span Rigid Frame",
       "para": "When large open spaces are necessary, the gable clear span frame type is typically the economical choice. This tapered member frame can be designed in symmetrical or asymmetrical configurations. It is compatible with both cold-form purlins and open web joists, including our ClearBay option.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/steel1.jpg"
     },
     {
       "heading": "Gable Modular Rigid Frame",
       "para": "The interior columns provide multiple spans on wider buildings. This economical frame type is common in building widths from 80′ to more than 300′ where multiple spans are suitable.  The modular frame is compatible with both cold-form purlins and open web joists.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/steel2.jpg"
     },
     {
       "heading": "Single Slope Rigid Frame",
       "para": "Available in clear span or modular, the single slope framing system is a flexible design solution that offers a sloping roof in one plane. This is an excellent option when drainage restrictions are an issue. Parapet conditions & facades are often used to give the appearance that all walls are the same height.  A very economical solution, single slopes are often used to expand a building in the event it was not designed to carry a lean-to load.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/steel3.jpg"
+
     },
     {
       "heading": "Lean-to",
       "para": "A lean-to steel frame offers a sloping roof in one plane. It is joined to, and supported by a main building frame. Parapet conditions & facades can be used to give the appearance that all walls are the same height. An economical option when adding space to an existing structure, a lean-to must be supported on the high side by an adjoining building column.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/steel4.jpg"
     }
   ]
 

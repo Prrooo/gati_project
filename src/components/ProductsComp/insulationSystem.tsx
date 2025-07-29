@@ -12,17 +12,17 @@ export const InsulationSystem = () => {
     {
       "heading": "Silvercote Roof & Wall Insulation Systems ",
       "para": "Building Systems is proud to partner with Silvercote, a leading provider of innovative insulation solutions. As trusted industry experts, they understand the unique needs of our Builders and customers and provide optimal energy performance insulation solutions for metal buildings.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/insu1.jpg"
     },
     {
       "heading": "R-Boost Elevated Roof Insulation",
       "para": "R-Boost is an economical roof insulation solution that achieves the increased levels of thermal performance the latest codes demand.  R-Boost is a unique design that features a bridge between an initial and secondary layer of blanket insulation – doubling the insulation capacity.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/insu2.jpg"
     },
     {
       "heading": "Insulated Metal Panels",
       "para": "One of the most sophisticated building products on the market today, insulated wall and roof panels offer a clean, high-quality appearance that immediately adds value to any building. Designed with the latest scientific breakthroughs, they are lightweight, and durable while maintaining their ease of installation and visual appeal.",
-      "img": "/images/career.jpg"
+      "img": "/images/prodImages/insu3.jpg"
     }
   ]
 
